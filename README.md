@@ -6,4 +6,4 @@ pip install -r requirements.txt
 python merge.py
 
 # Or specify files
-python merge.py file1.xlsb file2.xlsb
+python merge.py file1.xlsb file.xlsb

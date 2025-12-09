@@ -1,5 +1,5 @@
 
-#Import Pandas library
+# Import libraries
 import pandas as pd
 import os
 
@@ -7,23 +7,20 @@ import os
 df1 = pd.read_excel('NRA FMCG HC instruction W-91.xlsb', sheet_name='INSTRUCTION', engine='pyxlsb')  # Sheet1 read karo
 # Second file Read the Sheet 
 df2 = pd.read_excel('NRA FMCG HC instruction W-92.xlsb', sheet_name='instruction', engine='pyxlsb')
-print("Successfully Read Sheet1 Data:")
-print(df1)
+
 print(f"Rows: {len(df1)}")
 
-print("\n Successfully Read Sheet2 Data:")  
-print(df2)
 print(f"Rows: {len(df2)}")
 
 # Step 2: Merge both Sheets data
 merged_df = pd.concat([df1, df2], ignore_index=True)
 
 print("\n MERGED SHEETS DATA:")
-print(merged_df)
+
 print(f"Total Rows: {len(merged_df)}")
 
 # Step 3: Save new CSV file
-csv_filename = 'Merged_Data.csv'
+csv_filename = 'Merged_File_Data.csv'
 merged_df.to_csv(csv_filename, 
                 index=False, 
                 encoding='utf-8-sig')  # Extra Use for Urdu and Arabic Characters

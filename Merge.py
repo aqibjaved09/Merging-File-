@@ -13,7 +13,7 @@ df2 = pd.read_excel('NRA FMCG HC instruction W-92.xlsb', sheet_name='instruction
 print("Rows & Columns in Sheet2:", df2.shape)
 
 # Merging the Two DataFrames and Exporting o CSV 
-pd.concat([df1, df2]).to_csv('Merged.csv', index=False, encoding='utf-8-sig')
+pd.concat([df1, df2]).to_csv('Merged_File.csv', index=False, encoding='utf-8-sig')
 
 # Print Successfully Message
 print("Merged CSV created successfully.")

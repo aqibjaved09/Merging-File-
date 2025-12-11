@@ -13,7 +13,8 @@ df3 = pd.read_csv(folder_path + 'Hair Color Relation with Main Template F-W93-V0
 df4 = pd.read_csv(folder_path + 'Hair Color Relation with Main Template F-W94-V0.csv') # Select the Csv 1st sheet
 df5 = pd.read_csv(folder_path + 'Hair Color Relation with Main Template F-W95-V0.csv') # Select the Csv 1st sheet
 df6 = pd.read_csv(folder_path + 'Hair Color Relation with Main Template F-W96-V0.csv') # Select the Csv 1st sheet
-  
+
+ #....................................
 # Using to check Rows of each file
 print(f"Rows: {len(df1)}") # Checking Rows file 1
 print(f"Rows: {len(df2)}") # Checking Rows file 2
@@ -26,6 +27,7 @@ print(f"Rows: {len(df6)}") # Checking Rows file 6
 # Merge Multiple Sheets data
 merged_df = pd.concat([df1, df2, df3, df4, df5, df6], ignore_index=True)
 
+# For PPrinting Total Rows after Merging
 print(f"Total Rows of Merging: {len(merged_df)}")
 
 # Save new CSV file
